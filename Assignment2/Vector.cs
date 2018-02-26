@@ -12,17 +12,29 @@ namespace Assignment2
 			this.y = y;
 		}
 
-
 		public int X
 		{
 			get { return x; }
-			set { x = value; }
+			set
+			{
+				if (X < 10 && X > -10)
+				{
+					x = value;
+				}
+			}
 		}
 
 		public int Y
 		{
 			get { return y; }
-			set { y = value; }
+			set
+			{
+				if (Y < 10 && Y > -10)
+				{
+					y = value;
+				}
+				
+			}
 		}
 	}
 }

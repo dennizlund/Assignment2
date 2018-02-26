@@ -38,3 +38,5 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+/.vs/Assignment2/v15/Server/sqlite3/db.lock
+/.vs/Assignment2/v15/Server/sqlite3

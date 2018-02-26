@@ -1,24 +1,33 @@
 ﻿using System;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace Assignment2
 {
-	public class Ball : Shape
+	public class Ball : IDrawable
 	{
-		private Pen pen = new Pen(Color.Black);
+		private Pen pen = new Pen(Color.White);
 		private int radius;
+        Point position;
 
-		public Ball(Point position, int radius) : base(position)
+		public Point Position
+		{
+			get { return position; }
+		}
+		
+
+		public Ball(Point position, int radius)
+		{
+            this.position = position;
+			this.radius = radius;
+		}
+
+		public Ball(int x, int y, int radius) : this(new Point(x, y), radius)
 		{
 			this.radius = radius;
 		}
 
-		public Ball(int x, int y, int radius) : base(new Point(x, y))
-		{
-			this.radius = radius;
-		}
-
-		override public void Draw(Graphics g)
+		public void Draw(Graphics g)
 		{
 			g.DrawEllipse(pen,position.X - radius, position.Y - radius, 2 * radius, 2 * radius);
 		}

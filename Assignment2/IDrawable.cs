@@ -2,15 +2,8 @@
 
 namespace Assignment2
 {
-	public abstract class Shape
+	public interface IDrawable
 	{
-		protected Point position;
-
-		public Shape(Point position)
-		{
-			this.position = position;
-		}
-
-		public abstract void Draw(Graphics g);
+        void Draw(Graphics g);
 	}
 }
