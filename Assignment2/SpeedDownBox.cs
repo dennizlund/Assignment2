@@ -15,12 +15,15 @@ namespace Assignment2
         }
         public override void CollisionEffect(Ball ball)
         {
+            ball.SpeedDown();
+
+            /*
             if (ball.Speed.X / 2 != 0 && ball.Speed.Y / 2 != 0)
             {
                 ball.Speed.X = ball.Speed.X / 2;
                 ball.Speed.Y = ball.Speed.Y / 2;
             }
-
+            */
             
         }
     }

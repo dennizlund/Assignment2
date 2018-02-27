@@ -21,7 +21,10 @@ namespace Assignment2
 
         public override void CollisionEffect(Ball ball)
         {
+            ball.FlipXSpeed();
+            /*
             ball.Speed.X = ball.Speed.X * - 1;
+            */
         }
 
 }

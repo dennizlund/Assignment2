@@ -46,5 +46,30 @@ namespace Assignment2
 			set { speed = value; }
 		}
 
-	}
+	    public void SpeedUp()
+	    {
+	        Speed.X = Speed.X * 2;
+	        Speed.Y = Speed.Y * 2;
+        }
+
+	    public void SpeedDown()
+	    {
+	        if (Speed.X / 2 != 0 && Speed.Y / 2 != 0)
+	        {
+	            Speed.X = Speed.X / 2;
+	            Speed.Y = Speed.Y / 2;
+	        }
+
+        }
+
+	    public void FlipYSpeed()
+	    {
+	        Speed.Y = Speed.Y * -1;
+        }
+
+	    public void FlipXSpeed()
+	    {
+	        Speed.X = Speed.X * -1;
+        }
+    }
 }

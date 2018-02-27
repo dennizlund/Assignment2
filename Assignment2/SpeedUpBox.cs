@@ -15,8 +15,12 @@ namespace Assignment2
         }
         public override void CollisionEffect(Ball ball)
         {
+            ball.SpeedUp();
+
+            /*
                 ball.Speed.X = ball.Speed.X * 2;
                 ball.Speed.Y = ball.Speed.Y * 2;
+            */
         }
     }
 }
